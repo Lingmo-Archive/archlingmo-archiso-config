@@ -80,7 +80,7 @@ nilfs-utils
 nmap
 ntfs-3g
 nvme-cli
-oh-my-zsh
+oh-my-zsh-git
 openconnect
 open-iscsi
 openpgp-card-tools
