@@ -132,4 +132,4 @@ xfsprogs
 xl2tpd
 zsh
 zsh-autosuggestions
-zsh-completions
+zsh-syntax-highlighting
