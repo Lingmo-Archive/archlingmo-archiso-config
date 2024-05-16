@@ -1,5 +1,5 @@
 # lingmo-archiso-build
-LingmoOS LiveCD based on Arch Linux. This project is WIP and totally unusable.
+LingmoOS LiveCD based on Arch Linux. This project is WIP and partially unusable.
 ## Build
 ### Prerequisites
 - at least 3GiB of disk space
