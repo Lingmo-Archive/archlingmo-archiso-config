@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2034
 
-iso_name="lingmo"
+iso_name="lingmoos"
 iso_label="LINGMO_$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y%m)"
 iso_publisher="LingmoOS Team <https://lingmo.org>"
 iso_application="LingmoOS Live/Rescue DVD"
