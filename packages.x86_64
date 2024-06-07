@@ -1,8 +1,8 @@
+# archiso packages
 alsa-utils
 amd-ucode
-archinstall
 arch-install-scripts
-archlinuxcn-keyring
+archinstall
 b43-fwcutter
 base
 bcachefs-tools
@@ -37,6 +37,7 @@ gnu-netcat
 gpart
 gpm
 gptfdisk
+#grml-zsh-config
 grub
 hdparm
 hyperv
@@ -51,10 +52,10 @@ less
 lftp
 libfido2
 libusb-compat
+linux
 linux-atm
 linux-firmware
 linux-firmware-marvell
-linux-xanmod-lts
 livecd-sounds
 lsscsi
 lvm2
@@ -73,18 +74,16 @@ mtools
 nano
 nbd
 ndisc6
-neofetch
 nfs-utils
 nilfs-utils
 nmap
 ntfs-3g
 nvme-cli
-oh-my-zsh-git
-openconnect
 open-iscsi
+open-vm-tools
+openconnect
 openpgp-card-tools
 openssh
-open-vm-tools
 openvpn
 partclone
 parted
@@ -123,7 +122,6 @@ usbutils
 vim
 virtualbox-guest-utils-nox
 vpnc
-wezterm-terminfo
 wireless-regdb
 wireless_tools
 wpa_supplicant
@@ -131,5 +129,33 @@ wvdial
 xfsprogs
 xl2tpd
 zsh
+
+# archlinuxcn
+archlinuxcn-keyring
+yay
+
+# cli tools
+neofetch
+oh-my-zsh-git
 zsh-autosuggestions
 zsh-syntax-highlighting
+
+# gui
+xorg
+ttf-dejavu
+sddm
+networkmanager
+kwin
+
+# lingmo
+lingmo-core
+lingmo-filemanager
+lingmo-settings
+LingmoUI
+liblingmo
+lingmo-terminal
+lingmo-dock
+lingmo-launcher
+lingmo-wallpapers
+lingmo-systemicons
+lingmo-qt-plugins
