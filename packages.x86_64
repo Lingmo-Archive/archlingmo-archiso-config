@@ -148,6 +148,7 @@ networkmanager
 kwin
 
 # lingmo
+qt5
 lingmo-core
 lingmo-filemanager
 lingmo-settings
@@ -159,3 +160,4 @@ lingmo-launcher
 lingmo-wallpapers
 lingmo-systemicons
 lingmo-qt-plugins
+lingmo-statusbar
