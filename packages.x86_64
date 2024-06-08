@@ -155,6 +155,8 @@ ttf-jetbrains-mono-nerd
 cantarell-fonts
 ttf-liberation
 wqy-zenhei
+fcitx5-im
+fcitx5-chinese-addons
 
 # audio
 pipewire
