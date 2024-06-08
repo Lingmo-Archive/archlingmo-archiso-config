@@ -152,6 +152,9 @@ networkmanager
 network-manager-applet
 ttf-dejavu
 ttf-jetbrains-mono-nerd
+cantarell-fonts
+ttf-liberation
+wqy-zenhei
 
 # audio
 pipewire
