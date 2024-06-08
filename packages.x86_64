@@ -26,7 +26,7 @@ dosfstools
 e2fsprogs
 edk2-shell
 efibootmgr
-espeakup
+#espeakup
 ethtool
 exfatprogs
 f2fs-tools
@@ -56,7 +56,7 @@ linux
 linux-atm
 linux-firmware
 linux-firmware-marvell
-livecd-sounds
+#livecd-sounds
 lsscsi
 lvm2
 lynx
@@ -120,7 +120,7 @@ usb_modeswitch
 usbmuxd
 usbutils
 vim
-virtualbox-guest-utils-nox
+#virtualbox-guest-utils-nox
 vpnc
 wireless-regdb
 wireless_tools
@@ -143,24 +143,44 @@ zsh-syntax-highlighting
 
 # gui
 xorg
+virtualbox-guest-utils
+open-vm-tools
+xf86-input-vmmouse
+xf86-video-vmware
+sddm
+kwin
+networkmanager
+networkmanager-applet
 ttf-dejavu
 ttf-jetbrains-mono-nerd
-sddm
-networkmanager
-kwin
+
+# audio
+pipewire
+wireplumber
+pipewire-alsa
+pipewire-pulse
+pipewire-jack
+pulsemixer
+pavucontrol
+gst-plugin-pipewire
 
 # lingmo
 qt5
 lingmo-core
-lingmo-filemanager
-lingmo-settings
 LingmoUI
 liblingmo
+lingmo-filemanager
+lingmo-settings
 lingmo-terminal
 lingmo-dock
 lingmo-launcher
-lingmo-wallpapers
-lingmo-systemicons
-lingmo-qt-plugins
 lingmo-statusbar
+lingmo-qt-plugins
+lingmo-systemicons
+lingmo-wallpapers
 lingmo-fontpkg
+lingmo-calculator
+lingmo-texteditor
+lingmo-videoplayer
+lingmo-screenshots
+lingmo-screenlocker
