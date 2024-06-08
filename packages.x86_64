@@ -150,7 +150,7 @@ xf86-video-vmware
 sddm
 kwin
 networkmanager
-nm-applet
+network-manager-applet
 ttf-dejavu
 ttf-jetbrains-mono-nerd
 
