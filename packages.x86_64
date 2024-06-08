@@ -137,12 +137,14 @@ yay
 # cli tools
 neofetch
 oh-my-zsh-git
+powerline
 zsh-autosuggestions
 zsh-syntax-highlighting
 
 # gui
 xorg
 ttf-dejavu
+ttf-jetbrains-mono-nerd
 sddm
 networkmanager
 kwin
@@ -161,3 +163,4 @@ lingmo-wallpapers
 lingmo-systemicons
 lingmo-qt-plugins
 lingmo-statusbar
+lingmo-fontpkg
