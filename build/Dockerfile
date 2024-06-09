@@ -6,9 +6,6 @@ RUN pacman-key --init && \
 
 RUN git clone https://github.com/LingmoOS-Testing/lingmo-archiso-build /archiso
 
-COPY build.sh /build.sh
-RUN chmod +x /build.sh
-
 WORKDIR /archiso
 
-CMD ["/build.sh"]
+CMD ["/archiso/build/build.sh"]
