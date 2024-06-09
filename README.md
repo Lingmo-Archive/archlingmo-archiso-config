@@ -1,5 +1,5 @@
 # lingmo-archiso-build
-LingmoOS LiveCD based on Arch Linux. This project is WIP and partially unusable.
+LingmoOS LiveCD based on Arch Linux. This project is WIP and totally unusable.
 ## Build
 ```
 $ git clone --depth 1 https://github.com/LingmoOS-Testing/lingmo-archiso-build
