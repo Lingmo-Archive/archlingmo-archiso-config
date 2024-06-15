@@ -1,10 +1,9 @@
 FROM archlinux:latest
 
 RUN pacman-key --init && \
-    pacman -Syu --noconfirm && \
-    pacman -S --noconfirm archiso git memtest86+-efi memtest86+
+    pacman -Syu --noconfirm archiso git memtest86+-efi memtest86+
 
-RUN git clone https://github.com/LingmoOS-Testing/lingmo-archiso-build /archiso
+RUN git clone --depth 1 https://github.com/LingmoOS-Testing/lingmo-archiso-build /archiso
 
 WORKDIR /archiso
 
