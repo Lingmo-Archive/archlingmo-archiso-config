@@ -1,4 +1,4 @@
 #!/bin/sh
 set -e
 cd /archiso
-mkarchiso -v .
+mkarchiso -v . -o /archiso-out
