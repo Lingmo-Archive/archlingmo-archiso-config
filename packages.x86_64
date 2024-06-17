@@ -180,6 +180,7 @@ lingmo-dock
 lingmo-launcher
 lingmo-statusbar
 lingmo-qt-plugins
+lingmo-kwin-plugins
 lingmo-systemicons
 lingmo-wallpapers
 lingmo-calculator
@@ -187,3 +188,4 @@ lingmo-texteditor
 lingmo-videoplayer
 lingmo-screenshots
 lingmo-screenlocker
+lingmo-sddm-theme
