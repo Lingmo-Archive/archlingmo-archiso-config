@@ -169,7 +169,7 @@ pavucontrol
 gst-plugin-pipewire
 
 # lingmo
-qt5
+qt5-base
 lingmo-core
 LingmoUI
 liblingmo
