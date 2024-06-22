@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:edge
 
 RUN apk add --no-cache wget bash git arch-install-scripts make bash coreutils util-linux grep gawk xz sed dosfstools e2fsprogs grub gzip squashfs-tools py3-docutils pacman
 RUN mkdir /etc/pacman.d
