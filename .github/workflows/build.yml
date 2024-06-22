@@ -26,12 +26,12 @@ jobs:
       run: |
         docker build -t archiso-builder -f build/Dockerfile .
 
-    - name: Run ArchISO builder
+    - name: Run archiso builder
       run: |
-        docker run --rm --privileged -v $PWD/archiso-out:/archiso/out archiso-builder
+        docker run --rm --privileged -v $PWD:/out archiso-builder
 
     - name: Upload ISO
       uses: actions/upload-artifact@v3
       with:
         name: archiso
-        path: archiso-out/*.iso
+        path: lingmoos-*.iso
