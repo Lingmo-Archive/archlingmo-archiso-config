@@ -1,10 +1,9 @@
-FROM archlinux:latest
+FROM alpine:latest
 
-RUN pacman-key --init && \
-    pacman -Syu --noconfirm archiso git memtest86+-efi memtest86+
+RUN apk add --no-cache bash git arch-install-scripts make bash coreutils util-linux grep gawk xz sed dosfstools e2fsprogs grub gzip squashfs-tools
 
-RUN git clone --depth 1 https://github.com/LingmoOS-Testing/lingmo-archiso-build /archiso
+RUN git clone https://gitlab.archlinux.org/archlinux/archiso.git
 
-WORKDIR /archiso
-
-CMD ["/archiso/build/build.sh"]
+RUN git clone --depth 1 https://github.com/LingmoOS-Testing/lingmo-archiso-build /lingmo-archiso-build
+WORKDIR /lingmo-archiso-build
+CMD ["/lingmo-archiso-build/build/build.sh"]
