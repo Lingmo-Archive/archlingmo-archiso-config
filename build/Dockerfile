@@ -1,6 +1,6 @@
 FROM alpine:edge
 
-RUN apk add --no-cache wget bash git arch-install-scripts make bash coreutils util-linux grep gawk xz sed dosfstools e2fsprogs grub grub-efi gzip squashfs-tools py3-docutils pacman
+RUN apk add --no-cache wget bash git arch-install-scripts make bash coreutils util-linux grep gawk xz sed dosfstools e2fsprogs grub grub-efi gzip squashfs-tools py3-docutils pacman mtools
 RUN mkdir /etc/pacman.d
 RUN wget "https://www.archlinux.org/mirrorlist/all/" -O /etc/pacman.d/mirrorlist
 RUN sed -i 's/^#Server/Server/' /etc/pacman.d/mirrorlist
