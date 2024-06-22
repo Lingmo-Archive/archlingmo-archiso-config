@@ -28,10 +28,11 @@ jobs:
 
     - name: Run archiso builder
       run: |
-        docker run --rm --privileged -v $PWD:/out archiso-builder
+        mkdir -p out
+        docker run --rm --privileged -v $PWD/out:/lingmo-archiso-build/out archiso-builder
         ls -la
     - name: Upload ISO
       uses: actions/upload-artifact@v4
       with:
         name: archiso
-        path: ./**/lingmoos-*.iso
+        path: ./out
