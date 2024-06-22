@@ -7,4 +7,5 @@ RUN wget "https://gitlab.archlinux.org/archlinux/packaging/packages/pacman-mirro
 RUN git clone https://gitlab.archlinux.org/archlinux/archiso.git /archiso
 RUN git clone --depth 1 --branch alpine-docker-test --single-branch https://github.com/LingmoOS-Testing/lingmo-archiso-build /lingmo-archiso-build
 
+RUN cp /lingmo-archiso-build/pacman.conf /etc/pacman.conf
 CMD ["/lingmo-archiso-build/build/build.sh"]
