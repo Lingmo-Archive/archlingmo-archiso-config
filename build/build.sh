@@ -1,5 +1,6 @@
 #!/bin/sh
 set -e
-cd /lingmo-archiso-build/archiso
+cd /archiso
 make PREFIX=/usr install
+cd /lingmo-archiso-build
 mkarchiso -v . -o /out
