@@ -2,8 +2,6 @@ name: Build ISO Image
 
 on:
   push:
-    tags:
-      - 'v*'
   workflow_dispatch:
 
 permissions: write-all
@@ -41,34 +39,3 @@ jobs:
       with:
         name: archiso
         path: ./out
-
-  release:
-    runs-on: ubuntu-latest
-    needs: [build]
-    steps:
-
-      - uses: actions/checkout@v2
-      
-      - name: Get current date
-        env: 
-          TZ: "Asia/Shanghai"
-        id: date
-        run: |
-          echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
-        
-      - name: Download artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: archiso
-
-      - name: Create release
-        uses: softprops/action-gh-release@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.run_id }}
-          name: ${{ steps.date.outputs.date }}
-          draft: false
-          prerelease: false
-          files: |
-           *.iso
