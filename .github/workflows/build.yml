@@ -14,28 +14,21 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v3
-
-    - name: Cache Docker layers
-      uses: actions/cache@v4
-      with:
-        path: /tmp/.buildx-cache
-        key: ${{ runner.os }}-buildx-${{ github.sha }}
-        restore-keys: |
-          ${{ runner.os }}-buildx-
-
-    - name: Build Docker image
+    - name: Pull Docker image
       run: |
-        docker build -t archiso-builder -f build/Dockerfile .
+        docker pull archlinux
 
     - name: Run archiso builder
       run: |
-        mkdir -p out
-        docker run --rm --privileged -v $PWD/out:/lingmo-archiso-build/out archiso-builder
+        docker run --rm --privileged -v $PWD:/out archlinux sh -c "
+          pacman-key --init
+          pacman -Syu --noconfirm archiso git memtest86+-efi memtest86+
+          git clone --depth 1 https://github.com/LingmoOS/archlingmo-archiso-config /config
+          mkarchiso -v /config -o /out
+        "
 
     - name: Upload ISO
       uses: actions/upload-artifact@v4
       with:
         name: archiso
-        path: ./out
+        path: ./*.iso
