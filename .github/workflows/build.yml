@@ -15,14 +15,13 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Pull Docker image
-      run: |
-        docker pull archlinux
+      run: docker pull archlinux
 
     - name: Cache pacman packages
       id: cache-pacman
       uses: actions/cache@v4
       with:
-        path: pkg
+        path: /var/cache/pacman/pkg
         key: ${{ runner.os }}-pacman-${{ hashFiles('archiso/**') }}
         restore-keys: |
           ${{ runner.os }}-pacman-
