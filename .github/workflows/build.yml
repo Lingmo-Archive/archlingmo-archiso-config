@@ -22,9 +22,9 @@ jobs:
       uses: actions/cache@v4
       with:
         path: /var/cache/pacman/pkg
-        key: ${{ runner.os }}-pacman-${{ hashFiles('archiso/**') }}
+        key: pacman
         restore-keys: |
-          ${{ runner.os }}-pacman-
+          pacman
 
     - name: Run archiso builder
       run: |
