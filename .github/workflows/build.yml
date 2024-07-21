@@ -17,6 +17,9 @@ jobs:
     - name: Pull Docker image
       run: docker pull archlinux
 
+    - name: Create pkg
+      run: mkdir pkg
+
     - name: Cache pacman packages
       id: cache-pacman
       uses: actions/cache@v4
