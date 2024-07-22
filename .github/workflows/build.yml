@@ -16,9 +16,6 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Pull Docker image
-      run: docker pull archlinux
-
     - name: Cache pacman packages
       id: cache-pacman
       uses: actions/cache@v4
@@ -28,19 +25,23 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-pacman-
 
+    - name: Pull Docker image
+      run: |
+        docker pull archlinux
+        docker run --privileged -v $PWD/pkg:/var/cache/pacman/pkg archlinux sh -c "
+          pacman-key --init
+          pacman-key --populate archlinux
+          echo '[archlinuxcn]'>>/etc/pacman.conf
+          echo 'Server = https://repo.archlinuxcn.org/\$arch'>>/etc/pacman.conf
+          cat /etc/pacman.conf
+          pacman-key --lsign-key 'farseerfc@archlinux.org'
+          pacman -Syu --noconfirm archlinuxcn-keyring archiso git memtest86+-efi memtest86+
+          git clone --depth 1 https://github.com/LingmoOS/archlingmo-archiso-config /config
+        "
+      
     - name: Run archiso builder
       run: |
-        docker run --rm --privileged -v $PWD:/out -v $PWD/pkg:/var/cache/pacman/pkg archlinux sh -c "
-        pacman-key --init
-        pacman-key --populate archlinux
-        echo '[archlinuxcn]'>>/etc/pacman.conf
-        echo 'Server = https://repo.archlinuxcn.org/\$arch'>>/etc/pacman.conf
-        cat /etc/pacman.conf
-        pacman-key --lsign-key 'farseerfc@archlinux.org'
-        pacman -Syu --noconfirm archlinuxcn-keyring archiso git memtest86+-efi memtest86+
-        git clone --depth 1 https://github.com/LingmoOS/archlingmo-archiso-config /config
-        mkarchiso -v /config/profile -o /out
-        "
+        docker run --rm --privileged -v $PWD:/out -v $PWD/pkg:/var/cache/pacman/pkg archlinux mkarchiso -v /config/profile -o /out
 
     - name: List contents in ISO
       run: 7z l *.iso
