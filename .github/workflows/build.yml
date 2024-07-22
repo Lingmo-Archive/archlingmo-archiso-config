@@ -19,7 +19,6 @@ jobs:
 
     - name: Cache pacman packages
       id: cache-pacman
-      run: mkdir pkg
       uses: actions/cache@v4
       with:
         path: pkg
