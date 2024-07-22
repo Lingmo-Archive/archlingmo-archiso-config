@@ -2,6 +2,8 @@ name: Build ISO Image
 
 on:
   push:
+  schedule:
+    - cron: '0 0 1 * *'
   workflow_dispatch:
 
 permissions: write-all
@@ -34,6 +36,9 @@ jobs:
           git clone --depth 1 https://github.com/LingmoOS/archlingmo-archiso-config /config
           mkarchiso -v /config/profile -o /out
         "
+
+    - name: List contents in ISO
+      run: 7z l *.iso
 
     - name: Upload ISO
       uses: actions/upload-artifact@v4
