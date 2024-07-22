@@ -35,7 +35,6 @@ jobs:
         pacman-key --populate archlinux
         echo '[archlinuxcn]'>>/etc/pacman.conf
         echo 'Server = https://repo.archlinuxcn.org/$arch'>>/etc/pacman.conf
-        EOF
         pacman -Syu --noconfirm archlinuxcn-keyring archiso git memtest86+-efi memtest86+
         git clone --depth 1 https://github.com/LingmoOS/archlingmo-archiso-config /config
         mkarchiso -v /config/profile -o /out
