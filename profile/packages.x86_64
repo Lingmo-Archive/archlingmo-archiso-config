@@ -130,9 +130,14 @@ xfsprogs
 xl2tpd
 zsh
 
+# system utils
+networkmanager
+network-manager-applet
+
 # archlinuxcn
 archlinuxcn-keyring
 yay
+paru
 
 # cli tools
 neofetch
@@ -141,24 +146,29 @@ zsh-autosuggestions
 zsh-theme-powerlevel10k-git
 zsh-syntax-highlighting
 
-# gui
-xorg
+# video drivers
 virtualbox-guest-utils
 open-vm-tools
 xf86-input-vmmouse
 xf86-video-vmware
 nvidia
+
+# gui base
+xorg
 sddm
 kwin
-networkmanager
-network-manager-applet
+
+# fonts
 ttf-dejavu
 ttf-jetbrains-mono-nerd
 cantarell-fonts
 wqy-zenhei
+
+# gui tools
 fcitx5-im
 fcitx5-chinese-addons
 lxappearance-gtk3
+gparted
 
 # audio
 pipewire
