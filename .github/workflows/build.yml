@@ -15,30 +15,23 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v3
-
-    - name: Cache Docker layers
-      uses: actions/cache@v4
-      with:
-        path: /tmp/.buildx-cache
-        key: ${{ runner.os }}-buildx-${{ github.sha }}
-        restore-keys: ${{ runner.os }}-buildx-
-
+    
     - name: Build Docker image
       run: |
-        docker buildx build --cache-from=type=local,src=/tmp/.buildx-cache \
-                     --cache-to=type=local,dest=/tmp/.buildx-cache-new \
-                     -t builder https://github.com/LingmoOS/archlingmo-archiso-config.git
-          
-    - name: Cache pacman packages
-      id: cache-pacman
+        docker build -t builder https://github.com/LingmoOS/archlingmo-archiso-config.git
+        docker save builder | zstd -o builder.tar.zst
+    
+    - name: Cache Docker image
+      id: cache-docker-image
       uses: actions/cache@v4
       with:
-        path: pkg
-        key: ${{ runner.os }}-pacman-${{ github.sha }}
-        restore-keys: ${{ runner.os }}-pacman-
+        path: builder.tar.zst
+        key: ${{ runner.os }}-docker-image-${{ github.sha }}
+        restore-keys: ${{ runner.os }}-docker-image-
+    
+    - name: Load Docker image from cache
+      if: steps.cache-docker-image.outputs.cache-hit == 'true'
+      run: zstd -d builder.tar.zst -o - | docker load
     
     - name: Run archiso builder
       run: docker run --rm --privileged -v $PWD/out:/out -v $PWD/pkg:/var/cache/pacman/pkg builder
