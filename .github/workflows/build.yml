@@ -25,7 +25,7 @@ jobs:
         restore-keys: ${{ runner.os }}-docker-image-
 
     - name: test
-      if: steps.cache-docker-image.outputs.cache-hit == 'true'
+      if: steps.cache-docker-image.outputs.cache-hit != 'true'
       run: echo test
 
     - name: Load Docker image from cache
