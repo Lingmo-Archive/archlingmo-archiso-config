@@ -131,6 +131,7 @@ xl2tpd
 zsh
 
 # system utils
+busybox
 networkmanager
 network-manager-applet
 
@@ -163,10 +164,9 @@ ttf-dejavu
 ttf-jetbrains-mono-nerd
 cantarell-fonts
 wqy-zenhei
+otf-unifont
 
 # gui tools
-fcitx5-im
-fcitx5-chinese-addons
 lxappearance-gtk3
 gparted
 
@@ -190,7 +190,6 @@ qt5-quickcontrols2
 qt5-sensors
 qt5-speech
 qt5-svg
-qt5-tools
 qt5-translations
 qt5-wayland
 qt5-webchannel
