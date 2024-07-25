@@ -28,7 +28,7 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build --cache-from=type=local,src=/tmp/.buildx-cache \
+        docker buildx --cache-from=type=local,src=/tmp/.buildx-cache \
                      --cache-to=type=local,dest=/tmp/.buildx-cache-new \
                      -t builder https://github.com/LingmoOS/archlingmo-archiso-config.git
 
