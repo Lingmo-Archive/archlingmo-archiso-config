@@ -1,4 +1,4 @@
-# lingmo-archiso-build
+# archlingmo-archiso-config
 LingmoOS LiveCD based on Arch Linux. This project is WIP and totally unusable.
 ## Build
 ```
