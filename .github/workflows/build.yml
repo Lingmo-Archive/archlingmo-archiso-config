@@ -15,13 +15,7 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-    
-    - name: Build Docker image
-      if: steps.cache-docker-image.outputs.cache-hit != 'true'
-      run: |
-        docker build -t builder https://github.com/LingmoOS/archlingmo-archiso-config.git
-        docker save builder | zstd -o builder.tar.zst
-    
+
     - name: Cache Docker image
       id: cache-docker-image
       uses: actions/cache@v4
@@ -29,7 +23,13 @@ jobs:
         path: builder.tar.zst
         key: ${{ runner.os }}-docker-image-${{ github.sha }}
         restore-keys: ${{ runner.os }}-docker-image-
-    
+
+    - name: Build Docker image
+      if: steps.cache-docker-image.outputs.cache-hit != 'true'
+      run: |
+        docker build -t builder https://github.com/LingmoOS/archlingmo-archiso-config.git
+        docker save builder | zstd -o builder.tar.zst
+
     - name: Load Docker image from cache
       if: steps.cache-docker-image.outputs.cache-hit == 'true'
       run: zstd -d builder.tar.zst -o - | docker load
