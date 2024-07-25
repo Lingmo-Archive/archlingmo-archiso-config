@@ -15,6 +15,9 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+    
+    - name: Build Docker image
+      run: docker build -t builder https://github.com/LingmoOS/archlingmo-archiso-config.git
 
     - name: Cache pacman packages
       id: cache-pacman
@@ -22,15 +25,10 @@ jobs:
       with:
         path: pkg
         key: ${{ runner.os }}-pacman-${{ github.sha }}
-        restore-keys: |
-          ${{ runner.os }}-pacman-
-
-    - name: Build Docker image
-      run: docker build -t builder https://github.com/LingmoOS/archlingmo-archiso-config
-
+        restore-keys: ${{ runner.os }}-pacman-
+    
     - name: Run archiso builder
-      run: |
-        docker run --rm --privileged -v $PWD/out:/out -v $PWD/pkg:/var/cache/pacman/pkg builder
+      run: docker run --rm --privileged -v $PWD/out:/out -v $PWD/pkg:/var/cache/pacman/pkg builder
 
     - name: List contents in ISO
       run: 7z l out/*.iso
