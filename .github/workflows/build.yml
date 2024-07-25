@@ -27,15 +27,11 @@ jobs:
         restore-keys: ${{ runner.os }}-buildx-
 
     - name: Build Docker image
-      uses: docker/build-push-action@v6
-      with:
-        context: .
-        file: ./Dockerfile
-        builder: default
-        load: true
-        cache-from: type=local,src=/tmp/.buildx-cache
-        cache-to: type=local,dest=/tmp/.buildx-cache-new
-
+      run: |
+        docker buildx build --cache-from=type=local,src=/tmp/.buildx-cache \
+                     --cache-to=type=local,dest=/tmp/.buildx-cache-new \
+                     -t builder https://github.com/LingmoOS/archlingmo-archiso-config.git
+          
     - name: Cache pacman packages
       id: cache-pacman
       uses: actions/cache@v4
