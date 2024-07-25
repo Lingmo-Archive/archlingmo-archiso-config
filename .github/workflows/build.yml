@@ -16,8 +16,18 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
     
+    - name: Cache Docker layers
+      uses: actions/cache@v4
+      with:
+        path: /tmp/.buildx-cache
+        key: ${{ runner.os }}-buildx-${{ github.sha }}
+        restore-keys: ${{ runner.os }}-buildx-
+
     - name: Build Docker image
-      run: docker build -t builder https://github.com/LingmoOS/archlingmo-archiso-config.git
+      run: |
+        docker build --cache-from=type=local,src=/tmp/.buildx-cache \
+                     --cache-to=type=local,dest=/tmp/.buildx-cache-new \
+                     -t builder https://github.com/LingmoOS/archlingmo-archiso-config.git
 
     - name: Cache pacman packages
       id: cache-pacman
