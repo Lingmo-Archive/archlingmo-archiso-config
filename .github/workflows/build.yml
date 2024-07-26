@@ -3,7 +3,7 @@ name: Build ISO Image
 on:
   push:
   schedule:
-    - cron: '0 0 * * 1'
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 permissions: write-all
@@ -11,6 +11,7 @@ permissions: write-all
 jobs:
   build:
     runs-on: ubuntu-latest
+    name: ${{ github.event_name == 'schedule' && 'Daily Build' || 'Build ISO Image' }}
 
     steps:
     - name: Checkout repository
