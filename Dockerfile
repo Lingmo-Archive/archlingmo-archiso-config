@@ -7,4 +7,4 @@ RUN pacman-key --init && \
     pacman-key --lsign-key 'farseerfc@archlinux.org' && \
     pacman --config /config/profile/pacman.conf --noconfirm -Sy archlinuxcn-keyring
 
-CMD mkarchiso -v /config/profile -o /out
+CMD sh -c "pacman -Syu && mkarchiso -v /config/profile -o /out"
