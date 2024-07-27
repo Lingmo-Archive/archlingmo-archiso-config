@@ -20,16 +20,13 @@ jobs:
       id: cache-docker
       uses: actions/cache@v4
       with:
-        path: docker_image_cache.tar
+        path: builder.tar
         key: ${{ runner.os }}-docker-${{ github.sha }}
         restore-keys: ${{ runner.os }}-docker-
 
     - name: Load Docker image from cache
       if: steps.cache-docker.outputs.cache-hit == 'true'
-      run: |
-        if [ -f docker_image_cache.tar ]; then
-          docker load -i docker_image_cache.tar
-        fi
+      run: docker load -i builder.tar
 
     - name: Build Docker image
       if: steps.cache-docker.outputs.cache-hit != 'true'
@@ -37,7 +34,7 @@ jobs:
 
     - name: Save Docker image to cache
       if: steps.cache-docker.outputs.cache-hit != 'true'
-      run: docker save builder -o docker_image_cache.tar
+      run: docker save builder -o builder.tar
 
     - name: Cache pacman packages
       id: cache-pacman
