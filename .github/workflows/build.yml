@@ -27,13 +27,14 @@ jobs:
         if [ -f docker_image_cache.tar ]; then
           docker load -i docker_image_cache.tar
         fi
-        
+
     - name: Build Docker image
       if: steps.cache-docker.outputs.cache-hit != 'true'
-      run: |
-        docker build -t builder https://github.com/LingmoOS/archlingmo-archiso-config.git
-        docker save builder -o docker_image_cache.tar
+      run: docker build -t builder https://github.com/LingmoOS/archlingmo-archiso-config.git
 
+    - name: Save Docker image to cache
+      if: steps.cache-docker.outputs.cache-hit != 'true'
+      run: docker save builder -o docker_image_cache.tar
 
     - name: Cache pacman packages
       id: cache-pacman
@@ -55,3 +56,4 @@ jobs:
         name: archiso
         compression-level: 0
         path: out/*.iso
+        
