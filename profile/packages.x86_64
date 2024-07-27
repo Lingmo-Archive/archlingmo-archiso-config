@@ -169,15 +169,16 @@ otf-unifont
 # gui tools
 lxappearance-gtk3
 gparted
+falkon
 
 # audio
+alsa-firmware
 pipewire
 wireplumber
 pipewire-alsa
 pipewire-pulse
 pipewire-jack
 pulsemixer
-pavucontrol
 gst-plugin-pipewire
 
 # qt5
@@ -211,9 +212,7 @@ lingmo-qt-plugins
 lingmo-kwin-plugins
 lingmo-systemicons
 lingmo-wallpapers
-lingmo-calculator
 lingmo-texteditor
-lingmo-videoplayer
 lingmo-screenshots
 lingmo-screenlocker
 lingmo-sddm-theme
