@@ -1,4 +1,4 @@
-name: ${{ github.event_name == 'schedule' && 'Daily Build' || 'Build ISO Image' }}
+name: Build ISO Image
 
 on:
   push:
