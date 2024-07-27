@@ -21,7 +21,7 @@ jobs:
         key: ${{ runner.os }}-docker-${{ github.sha }}
         restore-keys: ${{ runner.os }}-docker-
 
-    - name: Load Docker image
+    - name: Load or Build Docker image
       run: |
         if [ -f docker_image_cache.tar ]; then
           docker load -i docker_image_cache.tar
