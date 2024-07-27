@@ -15,9 +15,29 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-    
+
+    - name: Cache Docker image
+      id: cache-docker
+      uses: actions/cache@v4
+      with:
+        path: docker_image_cache.tar
+        key: ${{ runner.os }}-docker-${{ github.sha }}
+        restore-keys: ${{ runner.os }}-docker-
+
+    - name: Load Docker image from cache
+      if: steps.cache-docker.outputs.cache-hit == 'true'
+      run: |
+        if [ -f docker_image_cache.tar ]; then
+          docker load -i docker_image_cache.tar
+        fi
+
     - name: Build Docker image
+      if: steps.cache-docker.outputs.cache-hit != 'true'
       run: docker build -t builder https://github.com/LingmoOS/archlingmo-archiso-config.git
+
+    - name: Save Docker image to cache
+      if: steps.cache-docker.outputs.cache-hit != 'true'
+      run: docker save builder -o docker_image_cache.tar
 
     - name: Cache pacman packages
       id: cache-pacman
@@ -26,7 +46,7 @@ jobs:
         path: pkg
         key: ${{ runner.os }}-pacman-${{ github.sha }}
         restore-keys: ${{ runner.os }}-pacman-
-    
+
     - name: Run archiso builder
       run: docker run --rm --privileged -v $PWD/out:/out -v $PWD/pkg:/var/cache/pacman/pkg builder
 
