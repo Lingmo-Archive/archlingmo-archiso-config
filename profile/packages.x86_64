@@ -165,7 +165,7 @@ kwin
 
 # fonts
 ttf-dejavu
-ttf-jetbrains-mono-nerd
+ttf-dejavu-nerd
 cantarell-fonts
 wqy-zenhei
 otf-unifont
@@ -173,7 +173,7 @@ otf-unifont
 # gui tools
 lxappearance-gtk3
 gparted
-falkon
+firefox
 
 # audio
 alsa-firmware
