@@ -171,7 +171,6 @@ wqy-zenhei
 otf-unifont
 
 # gui tools
-lxappearance-gtk3
 gparted
 firefox
 
@@ -217,6 +216,7 @@ lingmo-kwin-plugins
 lingmo-systemicons
 lingmo-wallpapers
 lingmo-texteditor
+lingmo-calculator
 lingmo-screenshots
 lingmo-screenlocker
 lingmo-sddm-theme
