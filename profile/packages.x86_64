@@ -159,7 +159,6 @@ xf86-video-vmware
 xf86-video-nouveau
 
 # gui base
-xorg
 sddm
 kwin
 
