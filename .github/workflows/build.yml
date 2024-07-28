@@ -42,7 +42,9 @@ jobs:
       run: docker run --rm --privileged -v $PWD/out:/out -v $PWD/pkg:/var/cache/pacman/pkg builder
 
     - name: List contents in ISO
-      run: 7z l out/*.iso
+      run: |
+        du -m out/*.iso
+        7z l out/*.iso
 
     - name: Upload ISO
       uses: actions/upload-artifact@v4
@@ -50,4 +52,3 @@ jobs:
         name: archiso
         compression-level: 0
         path: out/*.iso
-        
