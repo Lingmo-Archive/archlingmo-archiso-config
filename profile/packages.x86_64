@@ -143,6 +143,8 @@ yay
 paru
 
 # cli tools
+fastfetch
+ncdu
 neofetch
 oh-my-zsh-git
 zsh-autosuggestions
