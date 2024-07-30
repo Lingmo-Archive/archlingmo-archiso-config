@@ -8,6 +8,6 @@ RUN pacman-key --init && \
     echo 'Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch' >> /etc/pacman.conf && \
     pacman --noconfirm -Sy archlinuxcn-keyring
 
-CMD sh -c "pacman -Syu && \
+CMD sh -c "pacman --noconfirm -Syu && \
     git clone --depth 1 https://github.com/LingmoOS/archlingmo-archiso-config /config && \
     mkarchiso -v /config/profile -o /out"
