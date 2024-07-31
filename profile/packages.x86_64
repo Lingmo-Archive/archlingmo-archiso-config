@@ -170,6 +170,8 @@ otf-unifont
 # gui tools
 gparted
 firefox
+remmina
+onboard
 
 # audio
 alsa-firmware
