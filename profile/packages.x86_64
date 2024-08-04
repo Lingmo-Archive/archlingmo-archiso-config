@@ -162,13 +162,12 @@ sddm
 kwin
 
 # fonts
-ttf-dejavu
+ttf-liberation
 ttf-dejavu-nerd
-cantarell-fonts
 wqy-zenhei
-otf-unifont
 
 # gui tools
+calamares
 gparted
 firefox
 remmina
