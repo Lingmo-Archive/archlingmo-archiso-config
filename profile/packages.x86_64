@@ -144,9 +144,10 @@ paru
 fastfetch
 ncdu
 neofetch
+
+# zsh
 oh-my-zsh-git
 zsh-autosuggestions
-zsh-theme-powerlevel10k-git
 zsh-syntax-highlighting
 
 # video drivers
