@@ -144,6 +144,9 @@ paru
 fastfetch
 ncdu
 neofetch
+aria2
+htop
+btop
 
 # zsh
 oh-my-zsh-git
@@ -170,8 +173,17 @@ wqy-zenhei
 calamares
 gparted
 firefox
+thunderbird
 remmina
+libvncserver
+freerdp
+spice-gtk
 onboard
+ark
+ristretto
+mpv
+simplescreenrecorder
+bleachbit
 
 # audio
 alsa-firmware
