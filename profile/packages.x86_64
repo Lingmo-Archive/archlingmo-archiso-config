@@ -176,7 +176,6 @@ firefox
 thunderbird
 remmina
 libvncserver
-freerdp
 spice-gtk
 onboard
 ark
@@ -188,7 +187,6 @@ bleachbit
 # audio
 alsa-firmware
 pipewire
-wireplumber
 pipewire-alsa
 pipewire-pulse
 pipewire-jack
