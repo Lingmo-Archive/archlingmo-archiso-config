@@ -1,43 +1,30 @@
-# archiso packages
-alsa-utils
+# base packages
 amd-ucode
 arch-install-scripts
-#archinstall
 b43-fwcutter
 base
 bcachefs-tools
 bind
 bolt
-brltty
 broadcom-wl
 btrfs-progs
 clonezilla
-#cloud-init
 cryptsetup
 darkhttpd
 ddrescue
-dhclient
-dhcpcd
 diffutils
 dmidecode
 dmraid
-dnsmasq
 dosfstools
 e2fsprogs
-edk2-shell
 efibootmgr
-#espeakup
-ethtool
 exfatprogs
 f2fs-tools
 fatresize
 foot-terminfo
-fsarchiver
 gnu-netcat
-gpart
 gpm
 gptfdisk
-#grml-zsh-config
 grub
 hdparm
 hyperv
@@ -56,7 +43,6 @@ linux
 linux-atm
 linux-firmware
 linux-firmware-marvell
-#livecd-sounds
 lsscsi
 lvm2
 lynx
@@ -64,11 +50,8 @@ man-db
 man-pages
 mc
 mdadm
-memtest86+
-memtest86+-efi
 mkinitcpio
 mkinitcpio-archiso
-mkinitcpio-nfs-utils
 modemmanager
 mtools
 nano
@@ -81,7 +64,6 @@ ntfs-3g
 nvme-cli
 open-iscsi
 open-vm-tools
-openconnect
 openpgp-card-tools
 openssh
 openvpn
@@ -89,51 +71,44 @@ partclone
 parted
 partimage
 pcsclite
-ppp
-pptpclient
 pv
 qemu-guest-agent
 refind
 reflector
 reiserfsprogs
-rp-pppoe
 rsync
 rxvt-unicode-terminfo
 screen
 sdparm
-sequoia-sq
 sg3_utils
 smartmontools
-sof-firmware
 squashfs-tools
 sudo
 syslinux
 systemd-resolvconf
-tcpdump
 terminus-font
 testdisk
 tmux
 tpm2-tools
-tpm2-tss
 udftools
 usb_modeswitch
 usbmuxd
 usbutils
 vim
-#virtualbox-guest-utils-nox
-vpnc
 wireless-regdb
 wireless_tools
 wpa_supplicant
-wvdial
 xfsprogs
-xl2tpd
 zsh
 
 # system utils
 busybox
+debootstrap
 networkmanager
 network-manager-applet
+networkmanager-vpnc
+networkmanager-pptp
+networkmanager-openvpn
 
 # archlinuxcn
 archlinuxcn-keyring
@@ -147,6 +122,7 @@ neofetch
 aria2
 htop
 btop
+elinks
 
 # zsh
 oh-my-zsh-git
@@ -159,10 +135,6 @@ open-vm-tools
 xf86-input-vmmouse
 xf86-video-vmware
 xf86-video-nouveau
-
-# gui base
-sddm
-kwin
 
 # fonts
 ttf-liberation
@@ -181,12 +153,15 @@ spice-gtk
 onboard
 ark
 ristretto
+vlc
 mpv
 simplescreenrecorder
 bleachbit
 
 # audio
 alsa-firmware
+sof-firmware
+alsa-utils
 pipewire
 pipewire-alsa
 pipewire-pulse
@@ -212,6 +187,8 @@ qt5-x11extras
 qt5-xmlpatterns
 
 # lingmo
+sddm
+kwin
 lingmo-core
 LingmoUI
 liblingmo
