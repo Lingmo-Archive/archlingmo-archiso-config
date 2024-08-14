@@ -101,6 +101,11 @@ wpa_supplicant
 xfsprogs
 zsh
 
+# used by mkarchiso
+edk2-shell
+memtest86+
+memtest86+-efi
+
 # system utils
 busybox
 debootstrap
