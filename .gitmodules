@@ -1,0 +1,3 @@
+[submodule "submodules/lingmo-grub-config"]
+	path = submodules/lingmo-grub-config
+	url = https://github.com/LingmoOS/lingmo-grub-config
