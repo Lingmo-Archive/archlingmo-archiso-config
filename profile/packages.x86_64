@@ -186,6 +186,7 @@ lingmo-launcher
 lingmo-statusbar
 lingmo-qt-plugins
 lingmo-kwin-plugins
+lingmo-gtk-themes
 lingmo-systemicons
 lingmo-wallpapers
 lingmo-texteditor
@@ -193,3 +194,4 @@ lingmo-calculator
 lingmo-screenshots
 lingmo-screenlocker
 lingmo-sddm-theme
+
