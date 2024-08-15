@@ -124,7 +124,6 @@ xf86-video-nouveau
 # fonts
 ttf-dejavu
 ttf-dejavu-nerd
-ttf-liberation
 wqy-zenhei
 
 # gui tools
