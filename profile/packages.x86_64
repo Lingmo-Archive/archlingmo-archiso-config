@@ -24,6 +24,7 @@ gvfs
 hdparm
 hyperv
 intel-ucode
+iptables
 irssi
 iw
 jfsutils
@@ -173,6 +174,7 @@ qt5-xmlpatterns
 # lingmo
 sddm
 kwin
+qt6-multimedia-ffmpeg
 lingmo-core
 LingmoUI
 liblingmo
