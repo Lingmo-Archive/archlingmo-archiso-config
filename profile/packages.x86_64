@@ -26,6 +26,7 @@ gnu-netcat
 gpm
 gptfdisk
 grub
+gvfs
 hdparm
 hyperv
 intel-ucode
@@ -128,6 +129,9 @@ aria2
 htop
 btop
 elinks
+micro
+p7zip
+github-cli
 
 # zsh
 oh-my-zsh-git
@@ -142,8 +146,9 @@ xf86-video-vmware
 xf86-video-nouveau
 
 # fonts
-ttf-liberation
+ttf-dejavu
 ttf-dejavu-nerd
+ttf-liberation
 wqy-zenhei
 
 # gui tools
@@ -151,17 +156,16 @@ calamares
 gparted
 firefox
 thunderbird
-remmina
-libvncserver
-freerdp
-spice-gtk
+vinagre
 onboard
-ark
+xarchiver
 ristretto
 vlc
 mpv
 simplescreenrecorder
+obs-studio
 bleachbit
+font-manager
 
 # audio
 alsa-firmware
