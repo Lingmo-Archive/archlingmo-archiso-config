@@ -55,7 +55,6 @@ open-vm-tools
 openssh
 pv
 qemu-guest-agent
-refind
 reflector
 reiserfsprogs
 rsync
@@ -134,12 +133,9 @@ vinagre
 onboard
 xarchiver
 ristretto
-vlc
-mpv
 simplescreenrecorder
 obs-studio
 bleachbit
-font-manager
 
 # audio
 alsa-firmware
@@ -150,29 +146,12 @@ pipewire-alsa
 pipewire-pulse
 pipewire-jack
 pulsemixer
+pavucontrol
 gst-plugin-pipewire
-
-# qt5
-qt5-base
-qt5-declarative
-qt5-graphicaleffects
-qt5-location
-qt5-multimedia
-qt5-quickcontrols
-qt5-quickcontrols2
-qt5-sensors
-qt5-speech
-qt5-svg
-qt5-translations
-qt5-wayland
-qt5-webchannel
-qt5-x11extras
-qt5-xmlpatterns
 
 # lingmo
 sddm
 kwin
-qt6-multimedia-ffmpeg
 lingmo-core
 LingmoUI
 liblingmo
@@ -191,4 +170,5 @@ lingmo-texteditor
 lingmo-calculator
 lingmo-screenshots
 lingmo-screenlocker
+lingmo-videoplayer
 lingmo-sddm-theme
