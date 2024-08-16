@@ -90,6 +90,7 @@ network-manager-applet
 networkmanager-vpnc
 networkmanager-pptp
 networkmanager-openvpn
+xorg-xhost
 
 # archlinuxcn
 archlinuxcn-keyring
@@ -170,5 +171,4 @@ lingmo-texteditor
 lingmo-calculator
 lingmo-screenshots
 lingmo-screenlocker
-lingmo-videoplayer
 lingmo-sddm-theme
