@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
-Name=Calamares Installer
-Comment=Install Arch Linux using Calamares
+Name=System Installer
+Comment=Install ArchLingmo using Calamares
 Exec=sudo calamares
 Icon=calamares
 Terminal=false

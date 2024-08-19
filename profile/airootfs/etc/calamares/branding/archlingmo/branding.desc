@@ -1,0 +1,27 @@
+---
+componentName: archlingmo
+welcomeStyleCalamares: true
+welcomeExpandingLogo: true
+windowExpanding: normal
+windowSize: 800px,520px
+windowPlacement: center
+
+strings:
+    productName:         ArchLingmo
+    shortProductName:    ArchLingmo
+    versionedName:       ArchLingmo
+    shortVersionedName:  ArchLingmo
+    bootloaderEntryName: ArchLingmo
+    productUrl:          https://lingmo.org
+    supportUrl:          https://github.com/orgs/LingmoOS/discussions
+    knownIssuesUrl:      https://github.com/LingmoOS/archlingmo-archiso-config/issues
+    releaseNotesUrl:     https://lingmo.org
+    donateUrl:           https://lingmo.org
+
+style:
+   SidebarBackground:        "#292F34"
+   SidebarText:              "#FFFFFF"
+   SidebarTextCurrent:       "#292F34"
+   SidebarBackgroundCurrent: "#EA76CB"
+
+slideshowAPI: 2
