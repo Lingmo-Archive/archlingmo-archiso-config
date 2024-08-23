@@ -18,6 +18,12 @@ strings:
     releaseNotesUrl:     https://lingmo.org
     donateUrl:           https://lingmo.org
 
+images:
+    productLogo:         "lingmo-logo.png"
+    productIcon:         "lingmo-logo.png"
+
+slideshow:               "show.qml"
+
 style:
    SidebarBackground:        "#292F34"
    SidebarText:              "#FFFFFF"
