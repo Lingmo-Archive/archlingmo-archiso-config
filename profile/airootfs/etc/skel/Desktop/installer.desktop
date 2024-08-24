@@ -2,7 +2,7 @@
 Version=1.0
 Name=System Installer
 Comment=Install ArchLingmo using Calamares
-Exec=sudo calamares
+Exec=pkexec calamares
 Icon=calamares
 Terminal=false
 Type=Application
