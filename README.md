@@ -13,7 +13,9 @@ Server = https://repo.archlinuxcn.org/$arch
 EOF
 # pacman -Sy archlinuxcn-keyring
 $ git clone --depth 1 https://github.com/LingmoOS/archlingmo-archiso-config
-# mkarchiso -v archlingmo-archiso-config/profile
+$ cd archlingmo-archiso-config
+# mkarchiso -v profile
 ```
+Find the ISO file in `out/` after building.
 ### See also
 [Archiso page on ArchWiki](https://wiki.archlinux.org/title/Archiso)
