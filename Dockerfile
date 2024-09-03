@@ -9,5 +9,5 @@ RUN pacman-key --init && \
     pacman --noconfirm -Sy archlinuxcn-keyring
 
 CMD sh -c "pacman --noconfirm -Syu && \
-    git clone --depth 1 --recurse-submodules https://github.com/LingmoOS/archlingmo-archiso-config /config && \
+    git clone --depth 1 https://github.com/LingmoOS/archlingmo-archiso-config /config && \
     mkarchiso -v /config/profile -o /out"
