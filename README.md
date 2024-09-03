@@ -1,9 +1,19 @@
 # archlingmo-archiso-config
-LingmoOS LiveCD based on Arch Linux. This project is WIP and totally unusable.
+Archiso config used by ArchLingmo (a branch of Lingmo OS based on Arch Linux).
+> [!NOTE]
+> This project is still WIP and not ready for production environment.
+
 ## Build
-```
+```console
+# pacman -Syu archiso git grub
+# pacman-key --lsign-key 'farseerfc@archlinux.org'
+# cat >> /etc/pacman.conf << EOF
+[archlinuxcn]
+Server = https://repo.archlinuxcn.org/$arch
+EOF
+# pacman -Sy archlinuxcn-keyring
 $ git clone --depth 1 https://github.com/LingmoOS/archlingmo-archiso-config
-# mkarchiso -v -w /path/to/workdir archlingmo-archiso-config/profile
+# mkarchiso -v archlingmo-archiso-config/profile
 ```
 ### See also
 [Archiso page on ArchWiki](https://wiki.archlinux.org/title/Archiso)
